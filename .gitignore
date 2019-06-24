@@ -1,0 +1,21 @@
+# Eclipse
+
+.classpath
+.project
+.settings
+
+# IntelliJ
+
+.idea
+**/*.iml
+
+# VSCode
+
+.vscode
+
+# Maven
+
+target
+
+# TestNG Reports
+**/testng-results.xml

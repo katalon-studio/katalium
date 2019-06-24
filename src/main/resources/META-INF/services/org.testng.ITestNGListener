@@ -1,0 +1,3 @@
+com.katalon.kata.testng.TestListener
+com.katalon.kata.testng.KatalonListener
+org.testng.reporters.XMLReporter

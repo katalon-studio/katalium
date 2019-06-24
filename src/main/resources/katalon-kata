@@ -1,0 +1,3 @@
+KATALON_SERVER_URL=https://analytics.katalon.com/
+KATALON_EMAIL=sample@email.com
+KATALON_API_KEY=sample-password
