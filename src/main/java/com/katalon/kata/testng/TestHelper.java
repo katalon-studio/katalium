@@ -3,7 +3,6 @@ package com.katalon.kata.testng;
 import com.katalon.kata.helper.LogHelper;
 import com.katalon.kata.webdriver.WebDriverPool;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 
 public class TestHelper {

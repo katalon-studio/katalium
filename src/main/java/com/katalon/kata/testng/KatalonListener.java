@@ -4,7 +4,6 @@ import com.katalon.kata.helper.GeneratorHelper;
 import com.katalon.kata.helper.LogHelper;
 import com.katalon.kata.helper.ParameterHelper;
 import com.katalon.kata.katalon.*;
-
 import org.slf4j.Logger;
 import org.testng.*;
 import org.testng.reporters.XMLReporter;
