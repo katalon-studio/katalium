@@ -19,6 +19,8 @@
     <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
 
+    <maven.test.skip>true</maven.test.skip>
+
     <testng.version>6.14.3</testng.version>
     <selenium-remote-driver.version>3.141.59</selenium-remote-driver.version>
     <selenium-chrome-driver.version>3.141.59</selenium-chrome-driver.version>
@@ -95,11 +97,11 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${maven-surefire-plugin.version}</version>
-        <!--        <configuration>-->
-        <!--          <suiteXmlFiles>-->
-        <!--            <suiteXmlFile>testng.xml</suiteXmlFile>-->
-        <!--          </suiteXmlFiles>-->
-        <!--        </configuration>-->
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
