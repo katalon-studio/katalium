@@ -20,7 +20,8 @@ public class KatalonProperties {
 
     private static final Logger log = LogHelper.getLogger();
 
-    private static final String CONFIG_FILE_PATH = System.getProperty("user.home") + File.separator + ".katalon" + File.separator +"framework.properties";
+    private static final String CONFIG_FILE_PATH =
+            System.getProperty("user.home") + File.separator + ".katalon" + File.separator + "framework.properties";
 
     private static final String KATALON_SERVER_URL_KEY = "KATALON_SERVER_URL";
 
@@ -28,7 +29,7 @@ public class KatalonProperties {
 
     private static final String PASSWORD_KEY = "KATALON_API_KEY";
 
-    public static final String DEFAULT_KATALON_SERVER_URL = "https://analytics.katalon.com";
+    private static final String DEFAULT_KATALON_SERVER_URL = "https://analytics.katalon.com";
 
     private String serverApiUrl;
 

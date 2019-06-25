@@ -55,14 +55,6 @@ public class KatalonAnalyticsConnector {
         return updateExecutionResult(token, projectId, testRunResult);
     }
 
-    public Execution terminateExecution(String token, long projectId, String sessionId) {
-        TestRunResult testRunResult = new TestRunResult();
-        testRunResult.setEnd(true);
-        testRunResult.setSessionId(sessionId);
-
-        return updateExecutionResult(token, projectId, testRunResult);
-    }
-
     public Execution updateExecutionResult(String token, long projectId, TestRunResult testRunResult) {
         String url = serverApiUrl + UPLOAD_TEST_REPORTS_URI;
 

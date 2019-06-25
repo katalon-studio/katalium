@@ -36,7 +36,7 @@ public class HttpHelper {
 
     private static final int DEFAULT_SOCKET_TIMEOUT = Integer.MAX_VALUE;
 
-    public static final String PROTOCOL = "TLSv1.2";
+    private static final String PROTOCOL = "TLSv1.2";
 
     private static HttpClient getHttpClient() {
         return getHttpClient(DEFAULT_CONNECT_TIMEOUT);
