@@ -25,13 +25,11 @@ import static com.katalon.kata.helper.Constants.*;
 
 public abstract class TestTemplate {
 
-    private static final Logger log = LogHelper.getLogger();
+    protected static final Logger log = LogHelper.getLogger();
 
     private static final String SERVER_CONFIG_URI = "/ConfigSessionsServlet";
 
     private static final ObjectMapper objectMapper = JsonHelper.objectMapper();
-
-    private ParameterHelper parameterHelper = ParameterHelper.getInstance();
 
     protected WebDriver driver;
 
@@ -44,10 +42,10 @@ public abstract class TestTemplate {
 
             Map<String, String> parameters = context.getCurrentXmlTest().getAllParameters();
 
-            parameterHelper.getPropertyNames().forEach(key -> {
+            ParameterHelper.getParameterNames().forEach(key -> {
                 String value = parameters.get(key);
                 if (Strings.isNullOrEmpty(value)) {
-                    value = parameterHelper.getParameterDefaultValue(key);
+                    value = ParameterHelper.getParameterDefaultValue(key);
                     parameters.put(key, value);
                 }
             });

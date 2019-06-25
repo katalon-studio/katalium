@@ -2,8 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.katalon.kata</groupId>
-  <artifactId>kata</artifactId>
-  <version>1.0.3-SNAPSHOT</version>
+  <artifactId>katalium</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <properties>

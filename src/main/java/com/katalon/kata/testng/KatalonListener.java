@@ -23,25 +23,27 @@ public class KatalonListener implements ITestListener, IExecutionListener, IRepo
 
     private static final Logger log = LogHelper.getLogger();
 
-    private String email;
-    private String password;
     private Long projectId;
 
     private KatalonAnalyticsConnector connector;
-    private String token;
-    private String sessionId;
-    private String suiteName;
-    private long executionId;
-    private String reportPath;
-    private String executionUrl;
 
-    private ParameterHelper parameterHelper = ParameterHelper.getInstance();
+    private String token;
+
+    private String sessionId;
+
+    private String suiteName;
+
+    private long executionId;
+
+    private String reportPath;
+
+    private String executionUrl;
 
     @Override
     public void onExecutionStart() {
         KatalonProperties katalonProperties = new KatalonProperties();
-        email = katalonProperties.getEmail();
-        password = katalonProperties.getPassword();
+        String email = katalonProperties.getEmail();
+        String password = katalonProperties.getPassword();
         projectId = null;
         connector = new KatalonAnalyticsConnector();
         log.info("Requesting token with user credentials.");
@@ -52,7 +54,7 @@ public class KatalonListener implements ITestListener, IExecutionListener, IRepo
     @Override
     public void onStart(ITestContext context) {
         try {
-            String project = parameterHelper.getParameterDefaultValue(KATA_PROJECT_ID_PARAMETER);
+            String project = ParameterHelper.getParameterDefaultValue(KATA_PROJECT_ID_PARAMETER);
             if (!Strings.isNullOrEmpty(project)) {
                 this.projectId =  Long.valueOf(project);
                 Execution execution = connector.createExecution(token, projectId, sessionId);

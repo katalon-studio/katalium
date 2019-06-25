@@ -12,11 +12,15 @@ public class ParameterHelper {
 
     private static Properties properties;
 
-    private ParameterHelper() {
-        loadParameters(Constants.KATA_DEFAULT_PARAMETERS_FILE);
+    static {
+        try {
+            loadParameters(Constants.KATA_DEFAULT_PARAMETERS_FILE);
+        } catch (Exception e) {
+            ExceptionHelper.rethrow(e);
+        }
     }
 
-    private void loadParameters(String propertiesFile) {
+    private static void loadParameters(String propertiesFile) {
         try (InputStream inputStream = ParameterHelper.class.getClassLoader().getResourceAsStream(propertiesFile)) {
             properties = new Properties();
             properties.load(inputStream);
@@ -27,22 +31,12 @@ public class ParameterHelper {
         properties.putAll(System.getenv());
     }
 
-    public String getParameterDefaultValue(String key) {
+    public static String getParameterDefaultValue(String key) {
         String value = properties.getProperty(key);
         return value;
     }
 
-    public Set<String> getPropertyNames() {
+    public static Set<String> getParameterNames() {
         return properties.stringPropertyNames();
-    }
-
-    public static ParameterHelper getInstance() {
-        return ParameterHelperHolder.INSTANCE;
-    }
-
-    private static class ParameterHelperHolder {
-
-        private static final ParameterHelper INSTANCE = new ParameterHelper();
-
     }
 }
