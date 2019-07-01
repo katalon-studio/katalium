@@ -25,7 +25,11 @@ public class PageTemplate {
   }
 
   protected void waitUtil(Function<? super WebDriver, ? extends Object> isTrue) {
-    WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+    waitUtil(isTrue, 10);
+  }
+
+  protected void waitUtil(Function<? super WebDriver, ? extends Object> isTrue, long timeOutInSeconds) {
+    WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutInSeconds);
     webDriverWait.until(isTrue);
   }
 }
