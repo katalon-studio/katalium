@@ -1,5 +1,7 @@
 package com.katalon.kata.helper;
 
+import java.io.File;
+
 import static com.katalon.kata.webdriver.WebDriverPool.CHROME;
 
 public class Constants {
@@ -7,6 +9,9 @@ public class Constants {
   // parameters
 
   public static final String KATA_DEFAULT_PARAMETERS_FILE = "kata-default.properties";
+
+  public static final String FRAMEWORK_PROPERTIES_FILE =
+          System.getProperty("user.home") + File.separator + ".katalon" + File.separator + "framework.properties";
 
   // parameter keys
 
