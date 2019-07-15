@@ -10,3 +10,5 @@ Please visit our [documentation](https://docs.katalon.com/katalium-framework/doc
 
 Katalium is open-sourced at https://github.com/katalon-studio/katalium.
 
+Katalium Server is open-sourced at https://github.com/katalon-studio/katalium-server.
+
