@@ -24,12 +24,29 @@ public class PageTemplate {
     PageFactory.initElements(driver, this);
   }
 
-  protected void waitUtil(Function<? super WebDriver, ? extends Object> isTrue) {
-    waitUtil(isTrue, 10);
+  protected void waitUntil(Function<? super WebDriver, ? extends Object> isTrue) {
+    waitUntil(isTrue, 10);
   }
 
-  protected void waitUtil(Function<? super WebDriver, ? extends Object> isTrue, long timeOutInSeconds) {
+  protected void waitUntil(Function<? super WebDriver, ? extends Object> isTrue, long timeOutInSeconds) {
     WebDriverWait webDriverWait = new WebDriverWait(driver, timeOutInSeconds);
     webDriverWait.until(isTrue);
+  }
+
+  /**
+   * @deprecated There was typo in the method name. Use `waitUntil` instead.
+   * @param isTrue
+   */
+  @Deprecated
+  protected void waitUtil(Function<? super WebDriver, ? extends Object> isTrue) {
+    waitUntil(isTrue);
+  }
+
+  /**
+   * @deprecated There was typo in the method name. Use `waitUntil` instead.
+   * @param isTrue
+   */
+  protected void waitUtil(Function<? super WebDriver, ? extends Object> isTrue, long timeOutInSeconds) {
+    waitUntil(isTrue, timeOutInSeconds);
   }
 }
