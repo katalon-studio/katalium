@@ -24,7 +24,7 @@
     <testng.version>6.14.3</testng.version>
     <selenium-remote-driver.version>3.141.59</selenium-remote-driver.version>
     <selenium-chrome-driver.version>3.141.59</selenium-chrome-driver.version>
-    <commons-io.version>2.6</commons-io.version>
+    <commons-io.version>2.7</commons-io.version>
     <commons-lang3.version>3.8.1</commons-lang3.version>
     <jackson-databind.version>2.9.10.5</jackson-databind.version>
     <jackson-core.version>2.9.8</jackson-core.version>
