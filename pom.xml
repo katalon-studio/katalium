@@ -22,8 +22,8 @@
     <maven.test.skip>true</maven.test.skip>
 
     <testng.version>6.14.3</testng.version>
-    <selenium-remote-driver.version>3.141.59</selenium-remote-driver.version>
-    <selenium-chrome-driver.version>3.141.59</selenium-chrome-driver.version>
+    <selenium-remote-driver.version>4.12.0</selenium-remote-driver.version>
+    <selenium-chrome-driver.version>4.12.0</selenium-chrome-driver.version>
     <commons-io.version>2.6</commons-io.version>
     <commons-lang3.version>3.8.1</commons-lang3.version>
     <jackson-databind.version>2.9.10.5</jackson-databind.version>
@@ -32,11 +32,11 @@
     <httpclient.version>4.5.6</httpclient.version>
     <logback-testng.version>1.0.0</logback-testng.version>
     <logback-classic.version>1.2.3</logback-classic.version>
-    <selenium-support.version>3.141.59</selenium-support.version>
-    <selenium-edge-driver.version>3.141.59</selenium-edge-driver.version>
-    <selenium-safari-driver.version>3.141.59</selenium-safari-driver.version>
+    <selenium-support.version>4.12.0</selenium-support.version>
+    <selenium-edge-driver.version>4.12.0</selenium-edge-driver.version>
+    <selenium-safari-driver.version>4.12.0</selenium-safari-driver.version>
     <selenium-ie-driver.version>3.141.59</selenium-ie-driver.version>
-    <selenium-firefox-driver.version>3.141.59</selenium-firefox-driver.version>
+    <selenium-firefox-driver.version>4.12.0</selenium-firefox-driver.version>
   </properties>
 
   <name>Katalium Framework</name>
